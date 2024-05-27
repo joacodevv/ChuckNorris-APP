@@ -1,7 +1,10 @@
 package com.joaquito.chucknorris
 
+import android.animation.ObjectAnimator
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.view.animation.AnimationUtils
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import com.joaquito.chucknorris.R
@@ -26,7 +29,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initListeners() {
-        binding.btnGetJoke.setOnClickListener { makeCall() }
+        binding.btnGetJoke.setOnClickListener {
+            binding.ivChuck.animation = AnimationUtils.loadAnimation(this, R.anim.shake_animation)
+            makeCall()
+
+        }
     }
 
     private fun showJoke() {

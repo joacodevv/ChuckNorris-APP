@@ -4,28 +4,60 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#82E0AA"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chuck Norris           APP"
+        android:textAlignment="center"
+        android:fontFamily="@font/luckiestguy_normal"
+        android:layout_marginTop="100dp"
+        android:textSize="48sp"
+        android:textColor="#BA4A00 "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnGetJoke"
         android:layout_width="wrap_content"
+        android:textSize="20dp"
+        android:padding="20dp"
         android:layout_height="wrap_content"
-        android:text="Get Joke"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginBottom="120dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="#DC7633"
+        android:text="GET CHUCK JOKE!"
+        android:layout_marginTop="40dp"/>
 
     <TextView
         android:id="@+id/tvJoke"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
+        android:fontFamily="@font/teko"
+        android:textSize="32sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="" />
+
+    <ImageView
+        android:id="@+id/ivChuck"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/chuck"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvJoke"
+        android:layout_margin="64dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
